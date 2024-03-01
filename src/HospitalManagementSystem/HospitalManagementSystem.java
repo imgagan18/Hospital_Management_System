@@ -56,6 +56,7 @@ public class HospitalManagementSystem {
                         break;
 
                     case 5:
+                        System.out.println("THANK YOU FOR USING THIS SYSTEM :)");
                         return;
                     default:
                         System.out.println("Enter a valid choice");
