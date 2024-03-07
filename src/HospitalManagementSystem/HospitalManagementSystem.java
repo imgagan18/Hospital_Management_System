@@ -9,7 +9,7 @@ public class HospitalManagementSystem {
 
     private static final String username="root";
 
-    private static final String password="gagandisha1212$";
+    private static final String password="pass123";
 
     public static void main(String[] args) {
         try {
