@@ -16,20 +16,20 @@ public class Doctors {
     }
     // view patient
     public void viewDoctors(){
-        String query="select * from Doctors";
+        String query=" SELECT  * FROM  Doctors ";
         try {//pre-paid statement to enhance the speed of the code
             PreparedStatement preparedStatement=connection.prepareStatement(query);
             ResultSet resultSet=preparedStatement.executeQuery();//prints using next nam ke pointer
             //use format specifiers
             System.out.println("Doctors:");
             System.out.println("+------------+--------------------+------------------+");
-            System.out.println("| Doctor Id  | Name               | Specialization   |");
+            System.out.println("| Doctor Id  | Name               | speciallization   |");
             System.out.println("+------------+--------------------+------------------+");
             while (resultSet.next()){
                 int id = resultSet.getInt("id");//integer type
                 String name = resultSet.getString("name");
-                String specialization = resultSet.getString("specialization");
-                System.out.printf("|%-15s|%-22s|%-19s|\n",id,name,specialization);
+                String speciallization = resultSet.getString("speciallization");
+                System.out.printf("|%-15s|%-22s|%-19s|\n",id,name,speciallization);
                 System.out.println("+------------+--------------------+------------------+");
             }
 
